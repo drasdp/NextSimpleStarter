@@ -1,0 +1,23 @@
+:root[data-theme='light'] {
+  --background: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --todo-background: #ffffff;
+  --todo-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme='dark'] {
+  --background: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --border-color: #404040;
+  --todo-background: #2d2d2d;
+  --todo-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

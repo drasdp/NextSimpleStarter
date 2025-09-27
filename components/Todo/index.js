@@ -8,10 +8,12 @@ import Grid from '@mui/material/Grid'
 import TodoItem from '../TodoItem'
 import styles from './index.module.css'
 import { useTodo } from '../../hooks/useTodo'
+import { useTheme } from '../../hooks/useTheme'
 
 const Todo = () => {
 	const [text, setText] = useState('')
 	const { todos, addTodo, updateTodo, removeTodo, completedTodos } = useTodo()
+	const { isDarkMode, setIsDarkMode } = useTheme()
 
 	const handleAddTodo = (e) => {
 		e.preventDefault()
@@ -27,7 +29,14 @@ const Todo = () => {
 
 	return (
 		<Grid container className={styles.todo} justify="center" direction="column">
-			<header>
+			<header className={styles.header}>
+				<button
+					className={styles.themeToggle}
+					onClick={() => setIsDarkMode(!isDarkMode)}
+					aria-label={isDarkMode ? '라이트 모드로 전환' : '다크 모드로 전환'}
+				>
+					{isDarkMode ? '🌞' : '🌙'}
+				</button>
 				<Image
 					className={styles.logo}
 					src="/static/img/splashscreen-icon-384x384.png"
@@ -72,4 +81,5 @@ const Todo = () => {
 }
 
 export default Todo
+
 
