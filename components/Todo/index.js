@@ -36,7 +36,7 @@ const Todo = () => {
 					height="192"
 					priority={true}
 				/>
-				<h1 className={styles.srOnly}> Todo App </h1>
+				<h1 className={styles.srOnly}> 할 일 목록 </h1>
 			</header>
 			<Paper className={styles.paper} elevation={3}>
 				<form onSubmit={handleAddTodo} className={styles.form}>
@@ -44,15 +44,15 @@ const Todo = () => {
 						fullWidth
 						value={text}
 						margin="normal"
-						label="What must be done?"
+						label="할 일을 입력하세요"
 						onChange={handleTextChange}
-						inputProps={{ 'aria-label': 'What must be done?' }}
+						inputProps={{ 'aria-label': '할 일을 입력하세요' }}
 					/>
-					<button className={styles.srOnly}> Submit Todo </button>
+					<button className={styles.srOnly}> 할 일 추가 </button>
 					{!!todos.length && (
 						<Grid container justifyContent={'space-between'}>
-							<Grid item>Total: {todos.length}</Grid>
-							<Grid item>Completed: {completedTodos.length}</Grid>
+							<Grid item>전체: {todos.length}</Grid>
+							<Grid item>완료: {completedTodos.length}</Grid>
 						</Grid>
 					)}
 				</form>
@@ -72,3 +72,4 @@ const Todo = () => {
 }
 
 export default Todo
+

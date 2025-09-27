@@ -36,7 +36,7 @@ const TodoItem = ({ todo, updateTodo, removeTodo }) => {
 				{todo.text}
 			</label>
 			<Fab
-				aria-label="Delete Todo"
+				aria-label="할 일 삭제"
 				onClick={() => removeTodo(todo)}
 				color="error"
 				size="small"
@@ -48,3 +48,4 @@ const TodoItem = ({ todo, updateTodo, removeTodo }) => {
 }
 
 export default TodoItem
+
