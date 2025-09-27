@@ -32,6 +32,7 @@ const TodoItem = ({ todo, updateTodo, removeTodo }) => {
 					checked={todo.completed}
 					onChange={() => updateTodo({ ...todo, completed: !todo.completed })}
 					color="primary"
+					aria-label="할 일 완료 체크박스"
 				/>
 				{todo.text}
 			</label>
@@ -48,4 +49,5 @@ const TodoItem = ({ todo, updateTodo, removeTodo }) => {
 }
 
 export default TodoItem
+
 
