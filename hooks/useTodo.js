@@ -4,7 +4,7 @@ export const useTodo = () => {
 	const initialState = [
 		{
 			id: 'vnode',
-			text: 'A simple initial todo',
+			text: '첫 번째 할 일',
 			completed: false,
 		},
 	]
@@ -39,3 +39,4 @@ export const useTodo = () => {
 		completedTodos,
 	}
 }
+
