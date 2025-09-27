@@ -13,7 +13,7 @@ import { useTheme } from '../../hooks/useTheme'
 const Todo = () => {
 	const [text, setText] = useState('')
 	const { todos, addTodo, updateTodo, removeTodo, completedTodos } = useTodo()
-	const { isDarkMode, setIsDarkMode } = useTheme()
+	const { isDarkMode, setIsDarkMode, mounted } = useTheme()
 
 	const handleAddTodo = (e) => {
 		e.preventDefault()
@@ -25,6 +25,10 @@ const Todo = () => {
 
 	const handleTextChange = (e) => {
 		setText(e.target.value)
+	}
+
+	if (!mounted) {
+		return null;
 	}
 
 	return (
@@ -81,5 +85,6 @@ const Todo = () => {
 }
 
 export default Todo
+
 
 
