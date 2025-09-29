@@ -37,7 +37,7 @@ const Todo = () => {
 				<button
 					className={styles.themeToggle}
 					onClick={() => setIsDarkMode(!isDarkMode)}
-					aria-label={isDarkMode ? '라이트 모드로 전환' : '다크 모드로 전환'}
+					aria-label={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
 				>
 					{isDarkMode ? '🌞' : '🌙'}
 				</button>
@@ -49,7 +49,7 @@ const Todo = () => {
 					height="192"
 					priority={true}
 				/>
-				<h1 className={styles.srOnly}> 할 일 목록 </h1>
+				<h1 className={styles.srOnly}> Todo List </h1>
 			</header>
 			<Paper className={styles.paper} elevation={3}>
 				<form onSubmit={handleAddTodo} className={styles.form}>
@@ -57,15 +57,15 @@ const Todo = () => {
 						fullWidth
 						value={text}
 						margin="normal"
-						label="할 일을 입력하세요"
+						label="Enter your todo"
 						onChange={handleTextChange}
-						inputProps={{ 'aria-label': '할 일을 입력하세요' }}
+						inputProps={{ 'aria-label': 'Enter your todo' }}
 					/>
-					<button className={styles.srOnly}> 할 일 추가 </button>
+					<button className={styles.srOnly}> Add Todo </button>
 					{!!todos.length && (
 						<Grid container justifyContent={'space-between'}>
-							<Grid item>전체: {todos.length}</Grid>
-							<Grid item>완료: {completedTodos.length}</Grid>
+							<Grid item>Total: {todos.length}</Grid>
+							<Grid item>Completed: {completedTodos.length}</Grid>
 						</Grid>
 					)}
 				</form>
@@ -85,6 +85,7 @@ const Todo = () => {
 }
 
 export default Todo
+
 
 
 
