@@ -23,6 +23,9 @@ const stars = await getStars();
 				</div>
 				<div className="relative">
 					<h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">📝 스마트 할 일 관리</h1>
+					<div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-6 rounded-lg">
+						<p className="font-semibold">🚧 이곳은 개발 브랜치입니다</p>
+					</div>
 					<div className="max-w-3xl mx-auto">
 						<p className="text-xl text-gray-700 mb-8 leading-relaxed">
 							일상의 모든 할 일을 체계적으로 관리하세요! 
@@ -81,6 +84,7 @@ export async function getStars() {
 		return 0
 	}
 }
+
 
 
 
